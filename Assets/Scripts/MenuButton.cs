@@ -6,24 +6,26 @@ public class MenuButton : MonoBehaviour
 {
     public static bool isMenuHidden = false;
     public GameObject arStuff;
-    public GameObject imageTracker;
+    public GameObject imageTarget;
     public GameObject mainMenu;
     public GameObject homeButton;
-    public GameObject cavaloButton;
+
     public void ChangeMenuState()
     {
         if (isMenuHidden)
         {
             arStuff.SetActive(false);
-            imageTracker.SetActive(false);
+            imageTarget.SetActive(false);
             mainMenu.SetActive(true);
             homeButton.SetActive(false);
+            isMenuHidden = false;
         } else
         {
             arStuff.SetActive(true);
-            imageTracker.SetActive(true);
+            imageTarget.SetActive(true);
             mainMenu.SetActive(false);
             homeButton.SetActive(true);
+            isMenuHidden = true;
         }
     }
 
